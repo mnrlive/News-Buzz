@@ -2,9 +2,8 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 
 This is a simple web application that fetches the latest news using newsapi.org with help of redux and displays it on the web page using react.
 
-![alt text](https://user-images.githubusercontent.com/11162404/34581203-a09789a6-f15d-11e7-8b5e-3ef16645eeab.png | width=100)
-![alt text](https://user-images.githubusercontent.com/11162404/34581202-a08128d2-f15d-11e7-94fb-886df9a46946.png | width=100)
-
+<img src="https://user-images.githubusercontent.com/11162404/34581203-a09789a6-f15d-11e7-8b5e-3ef16645eeab.png" width="700">
+<img src="https://user-images.githubusercontent.com/11162404/34581202-a08128d2-f15d-11e7-94fb-886df9a46946.png" width="700">
 Below you will find some information on how to perform common tasks.<br>
 You can find the most recent version of this guide [here](https://github.com/facebookincubator/create-react-app/blob/master/packages/react-scripts/template/README.md).
 
