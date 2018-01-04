@@ -14,6 +14,12 @@ class ArticleList extends Component {
 		this.props.dispatch(fetchArticles());
 	}
 
+	onSourceClick(params) {
+		console.log(params.target.id);
+		let source = params.target.id;
+		// this.props.dispatch(fetchArticles(source));
+	}
+
 	render() {
 		if (Object.getOwnPropertyNames(this.props.articles).length === 0) {
 			return <div />;
@@ -21,6 +27,7 @@ class ArticleList extends Component {
 		var articleNodes = this.props.articles.map(function(article) {
 			return (
 				<Article
+					key={article.title}
 					author={article.author}
 					title={article.title}
 					description={article.description}
@@ -59,75 +66,167 @@ class ArticleList extends Component {
 							</div>
 							<div className="w3-container w3-white">
 								<p>
-									<span className="w3-tag w3-black w3-margin-right w3-margin-bottm">
+									<button
+										className="w3-tag w3-black w3-margin-right w3-margin-bottm"
+										id="all"
+										onClick={this.onSourceClick}
+									>
 										All
-									</span>
-									<span className="w3-tag w3-light-grey w3-small w3-margin-right w3-margin-bottom">
+									</button>
+									<button
+										className="w3-tag w3-light-grey w3-small w3-margin-right w3-margin-bottom"
+										id="cnn"
+										onClick={this.onSourceClick}
+									>
 										CNN
-									</span>
-									<span className="w3-tag w3-light-grey w3-small w3-margin-right w3-margin-bottom">
+									</button>
+									<button
+										className="w3-tag w3-light-grey w3-small w3-margin-right w3-margin-bottom"
+										id="usa-today"
+										onClick={this.onSourceClick}
+									>
 										USA Today
-									</span>
-									<span className="w3-tag w3-light-grey w3-small w3-margin-right w3-margin-bottom">
+									</button>
+									<button
+										className="w3-tag w3-light-grey w3-small w3-margin-right w3-margin-bottom"
+										id="abc-news"
+										onClick={this.onSourceClick}
+									>
 										ABC News
-									</span>
-									<span className="w3-tag w3-light-grey w3-small w3-margin-right w3-margin-bottom">
+									</button>
+									<button
+										className="w3-tag w3-light-grey w3-small w3-margin-right w3-margin-bottom"
+										id="bloomberg"
+										onClick={this.onSourceClick}
+									>
 										Bloomberg
-									</span>
-									<span className="w3-tag w3-light-grey w3-small w3-margin-right w3-margin-bottom">
+									</button>
+									<button
+										className="w3-tag w3-light-grey w3-small w3-margin-right w3-margin-bottom"
+										id="business-insider"
+										onClick={this.onSourceClick}
+									>
 										Business Insider
-									</span>
-									<span className="w3-tag w3-light-grey w3-small w3-margin-right w3-margin-bottom">
+									</button>
+									<button
+										className="w3-tag w3-light-grey w3-small w3-margin-right w3-margin-bottom"
+										id="buzzfeed"
+										onClick={this.onSourceClick}
+									>
 										Buzzfeed
-									</span>
-									<span className="w3-tag w3-light-grey w3-small w3-margin-right w3-margin-bottom">
+									</button>
+									<button
+										className="w3-tag w3-light-grey w3-small w3-margin-right w3-margin-bottom"
+										id="engadget"
+										onClick={this.onSourceClick}
+									>
 										Engadget
-									</span>
-									<span className="w3-tag w3-light-grey w3-small w3-margin-right w3-margin-bottom">
+									</button>
+									<button
+										className="w3-tag w3-light-grey w3-small w3-margin-right w3-margin-bottom"
+										id="espn"
+										onClick={this.onSourceClick}
+									>
 										ESPN
-									</span>
-									<span className="w3-tag w3-light-grey w3-small w3-margin-right w3-margin-bottom">
+									</button>
+									<button
+										className="w3-tag w3-light-grey w3-small w3-margin-right w3-margin-bottom"
+										id="entertainment-weekly"
+										onClick={this.onSourceClick}
+									>
 										Entertainment Weekly
-									</span>
-									<span className="w3-tag w3-light-grey w3-small w3-margin-right w3-margin-bottom">
+									</button>
+									<button
+										className="w3-tag w3-light-grey w3-small w3-margin-right w3-margin-bottom"
+										id="hacker-news"
+										onClick={this.onSourceClick}
+									>
 										Hacker News
-									</span>
-									<span className="w3-tag w3-light-grey w3-small w3-margin-right w3-margin-bottom">
+									</button>
+									<button
+										className="w3-tag w3-light-grey w3-small w3-margin-right w3-margin-bottom"
+										id="nbc-news"
+										onClick={this.onSourceClick}
+									>
 										NBC News
-									</span>
-									<span className="w3-tag w3-light-grey w3-small w3-margin-right w3-margin-bottom">
+									</button>
+									<button
+										className="w3-tag w3-light-grey w3-small w3-margin-right w3-margin-bottom"
+										id="new-york-magazine"
+										onClick={this.onSourceClick}
+									>
 										New York Magazine
-									</span>
-									<span className="w3-tag w3-light-grey w3-small w3-margin-right w3-margin-bottom">
+									</button>
+									<button
+										className="w3-tag w3-light-grey w3-small w3-margin-right w3-margin-bottom"
+										id="reddit"
+										onClick={this.onSourceClick}
+									>
 										Reddit
-									</span>
-									<span className="w3-tag w3-light-grey w3-small w3-margin-right w3-margin-bottom">
+									</button>
+									<button
+										className="w3-tag w3-light-grey w3-small w3-margin-right w3-margin-bottom"
+										id="reuters"
+										onClick={this.onSourceClick}
+									>
 										Reuters
-									</span>
-									<span className="w3-tag w3-light-grey w3-small w3-margin-right w3-margin-bottom">
+									</button>
+									<button
+										className="w3-tag w3-light-grey w3-small w3-margin-right w3-margin-bottom"
+										id="the-new-york-times"
+										onClick={this.onSourceClick}
+									>
 										New York Times
-									</span>
-									<span className="w3-tag w3-light-grey w3-small w3-margin-right w3-margin-bottom">
+									</button>
+									<button
+										className="w3-tag w3-light-grey w3-small w3-margin-right w3-margin-bottom"
+										id="the-wall-street-journal"
+										onClick={this.onSourceClick}
+									>
 										Wall Street Journal
-									</span>
-									<span className="w3-tag w3-light-grey w3-small w3-margin-right w3-margin-bottom">
+									</button>
+									<button
+										className="w3-tag w3-light-grey w3-small w3-margin-right w3-margin-bottom"
+										id="tech-crunch"
+										onClick={this.onSourceClick}
+									>
 										Tech Crunch
-									</span>
-									<span className="w3-tag w3-light-grey w3-small w3-margin-right w3-margin-bottom">
+									</button>
+									<button
+										className="w3-tag w3-light-grey w3-small w3-margin-right w3-margin-bottom"
+										id="the-huffington-post"
+										onClick={this.onSourceClick}
+									>
 										The Huffington Post
-									</span>
-									<span className="w3-tag w3-light-grey w3-small w3-margin-right w3-margin-bottom">
+									</button>
+									<button
+										className="w3-tag w3-light-grey w3-small w3-margin-right w3-margin-bottom"
+										id="the-washington-post"
+										onClick={this.onSourceClick}
+									>
 										The Washington Post
-									</span>
-									<span className="w3-tag w3-light-grey w3-small w3-margin-right w3-margin-bottom">
+									</button>
+									<button
+										className="w3-tag w3-light-grey w3-small w3-margin-right w3-margin-bottom"
+										id="time"
+										onClick={this.onSourceClick}
+									>
 										Time
-									</span>
-									<span className="w3-tag w3-light-grey w3-small w3-margin-right w3-margin-bottom">
+									</button>
+									<button
+										className="w3-tag w3-light-grey w3-small w3-margin-right w3-margin-bottom"
+										id="the-verge"
+										onClick={this.onSourceClick}
+									>
 										The Verge
-									</span>
-									<span className="w3-tag w3-light-grey w3-small w3-margin-right w3-margin-bottom">
+									</button>
+									<button
+										className="w3-tag w3-light-grey w3-small w3-margin-right w3-margin-bottom"
+										id="more"
+										onClick={this.onSourceClick}
+									>
 										More...
-									</span>
+									</button>
 								</p>
 							</div>
 						</div>
@@ -137,42 +236,42 @@ class ArticleList extends Component {
 							</div>
 							<div className="w3-container w3-white">
 								<p>
-									<span className="w3-tag w3-black w3-margin-right w3-margin-bottom">
+									<button className="w3-tag w3-black w3-margin-right w3-margin-bottom">
 										All
-									</span>
-									<span className="w3-tag w3-light-grey w3-small w3-margin-right w3-margin-bottom">
+									</button>
+									<button className="w3-tag w3-light-grey w3-small w3-margin-right w3-margin-bottom">
 										Business
-									</span>
-									<span className="w3-tag w3-light-grey w3-small w3-margin-right w3-margin-bottom">
+									</button>
+									<button className="w3-tag w3-light-grey w3-small w3-margin-right w3-margin-bottom">
 										Entertaintment
-									</span>
-									<span className="w3-tag w3-light-grey w3-small w3-margin-right w3-margin-bottom">
+									</button>
+									<button className="w3-tag w3-light-grey w3-small w3-margin-right w3-margin-bottom">
 										Gaming
-									</span>
-									<span className="w3-tag w3-light-grey w3-small w3-margin-right w3-margin-bottom">
+									</button>
+									<button className="w3-tag w3-light-grey w3-small w3-margin-right w3-margin-bottom">
 										Norway
-									</span>
-									<span className="w3-tag w3-light-grey w3-small w3-margin-right w3-margin-bottom">
+									</button>
+									<button className="w3-tag w3-light-grey w3-small w3-margin-right w3-margin-bottom">
 										General
-									</span>
-									<span className="w3-tag w3-light-grey w3-small w3-margin-right w3-margin-bottom">
+									</button>
+									<button className="w3-tag w3-light-grey w3-small w3-margin-right w3-margin-bottom">
 										Health and Medical
-									</span>
-									<span className="w3-tag w3-light-grey w3-small w3-margin-right w3-margin-bottom">
+									</button>
+									<button className="w3-tag w3-light-grey w3-small w3-margin-right w3-margin-bottom">
 										Music
-									</span>
-									<span className="w3-tag w3-light-grey w3-small w3-margin-right w3-margin-bottom">
+									</button>
+									<button className="w3-tag w3-light-grey w3-small w3-margin-right w3-margin-bottom">
 										Politics
-									</span>
-									<span className="w3-tag w3-light-grey w3-small w3-margin-right w3-margin-bottom">
+									</button>
+									<button className="w3-tag w3-light-grey w3-small w3-margin-right w3-margin-bottom">
 										Science and Nature
-									</span>
-									<span className="w3-tag w3-light-grey w3-small w3-margin-right w3-margin-bottom">
+									</button>
+									<button className="w3-tag w3-light-grey w3-small w3-margin-right w3-margin-bottom">
 										Sport
-									</span>
-									<span className="w3-tag w3-light-grey w3-small w3-margin-right w3-margin-bottom">
+									</button>
+									<button className="w3-tag w3-light-grey w3-small w3-margin-right w3-margin-bottom">
 										Technology
-									</span>
+									</button>
 								</p>
 							</div>
 						</div>
